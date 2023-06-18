@@ -194,7 +194,7 @@ if __name__ == "__main__":
     try:
         endianstring = "<"
         with open(anim_path, 'rb') as f:
-            CompileAnim(endianstring, f.read(), outfilename=os.path.join(workspace, "bin.bin"))
+            CompileAnim(endianstring, f.read(), outfilename=os.path.join(workspace, "anim.bin"))
 
     except:  # catch *all* exceptions
         e = sys.exc_info()[1]

@@ -154,7 +154,7 @@ def DecompileBuild(endianstring, build, workspace):
 
     for atlas_root in root_node.getElementsByTagName('Atlas'):
         texture_node = atlas_root.getElementsByTagName("Texture")[0]
-        with open(os.path.join(workspace, texture_node.getAttribute("filename")), "wb") as f:
+        with open(os.path.join(workspace, texture_node.getAttribute("filename")[:-4] + ".xml"), "wb") as f:
             atlas_root.writexml(f)
 
 
